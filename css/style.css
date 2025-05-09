@@ -250,8 +250,12 @@ h6,
 .breadcrumb-item + .breadcrumb-item::before {
     color: rgba(255, 255, 255, .5);
 }
-
-
+/* montessori */
+.tall-img {
+    aspect-ratio: 4 / 3;
+    max-height: none;
+  }
+  
 /*** Facility ***/
 .facility-item .facility-icon {
     position: relative;

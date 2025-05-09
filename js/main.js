@@ -41,18 +41,55 @@
 
 
     // Header carousel
-    $(".header-carousel").owlCarousel({
+    var $carousel = $(".header-carousel");
+    var autoplayDelay = 8000; // slower default speed
+    var hoverDelay = 9000;    // even slower when hovered
+    var hoverTimer;
+    
+    $carousel.owlCarousel({
         autoplay: true,
-        smartSpeed: 1500,
+        autoplayTimeout: autoplayDelay,
+        smartSpeed: 2000,
         items: 1,
         dots: true,
         loop: true,
-        nav : true,
-        navText : [
+        nav: true,
+        navText: [
             '<i class="bi bi-chevron-left"></i>',
             '<i class="bi bi-chevron-right"></i>'
         ]
     });
+    
+    // On hover: slow down further
+    $carousel.on('mouseenter', function () {
+        $carousel.trigger('stop.owl.autoplay');
+        hoverTimer = setInterval(function () {
+            $carousel.trigger('next.owl.carousel');
+        }, hoverDelay);
+    });
+    
+    // On leave: restore normal speed
+    $carousel.on('mouseleave', function () {
+        clearInterval(hoverTimer);
+        $carousel.trigger('stop.owl.autoplay');
+        $carousel.trigger('play.owl.autoplay', [autoplayDelay]);
+    });
+
+
+//Old Carousel code-- 
+
+    // $(".header-carousel").owlCarousel({
+    //     autoplay: true,
+    //     smartSpeed: 1500,
+    //     items: 1,
+    //     dots: true,
+    //     loop: true,
+    //     nav : true,
+    //     navText : [
+    //         '<i class="bi bi-chevron-left"></i>',
+    //         '<i class="bi bi-chevron-right"></i>'
+    //     ]
+    // });
 
 
     // Testimonials carousel
