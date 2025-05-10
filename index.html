@@ -17,6 +17,9 @@
       href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@600&family=Lobster+Two:wght@700&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wdth,wght@1,18..144,103.2,900&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link
@@ -59,7 +62,7 @@
       <!-- Navbar Start -->
   <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
     <a href="index.html" class="navbar-brand">
-      <h1 class="m-0 text-primary">
+      <h1 id="logo-flex" class="m-0 text-primary">
         <img class="logo" src="img/Logo-Blocks.png" alt="MHM Logo" />Maya Montessori
       </h1>
     </a>
@@ -68,13 +71,15 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <div class="navbar-nav mx-auto">
-        <a href="index.html" class="nav-item nav-link">Home</a>
+        <a href="index.html" class="nav-item nav-link active">Home</a>
         <a href="about.html" class="nav-item nav-link">About Us</a>
-        <a href="montessori.html" class="nav-item nav-link active">Montessori</a>
+        <a href="montessori.html" class="nav-item nav-link">Montessori</a>
         <a href="testimonial.html" class="nav-item nav-link">Testimonials</a>
         <div class="nav-item dropdown">
-          <a href="classes.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Curriculum</a>
-          <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
+          <a href="classes.html" class="nav-link dropdown-toggle" id="curriculumLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Curriculum
+          </a>
+          <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0" aria-labelledby="curriculumLink">
             <a href="practical-life.html" class="dropdown-item">Practical Life</a>
             <a href="sensorial.html" class="dropdown-item">Sensorial</a>
             <a href="math.html" class="dropdown-item">Math</a>
@@ -121,7 +126,7 @@
                     <a
                       href="classes.html"
                       class="btn btn-dark rounded-pill py-sm-3 px-sm-5 animated slideInRight"
-                      >Our Classes</a
+                      >Our Curriculum</a
                     >
                   </div>
                 </div>
@@ -154,7 +159,7 @@
                     <a
                       href="classes.html"
                       class="btn btn-dark rounded-pill py-sm-3 px-sm-5 animated slideInRight"
-                      >Our Classes</a
+                      >Our Curriculum</a
                     >
                   </div>
                 </div>
@@ -193,7 +198,7 @@
                     <a
                       href="classes.html"
                       class="btn btn-dark rounded-pill py-sm-3 px-sm-5 animated slideInRight"
-                      >Our Classes</a
+                      >Our Curriculum</a
                     >
                   </div>
                 </div>
@@ -723,9 +728,9 @@
                             type="text"
                             class="form-control border-0"
                             id="gname"
-                            placeholder="Gurdian Name"
+                            placeholder="Guardian Name"
                           />
-                          <label for="gname">Gurdian Name</label>
+                          <label for="gname">Guardian Name</label>
                         </div>
                       </div>
                       <div class="col-sm-6">
@@ -734,9 +739,9 @@
                             type="email"
                             class="form-control border-0"
                             id="gmail"
-                            placeholder="Gurdian Email"
+                            placeholder="Guardian Email"
                           />
-                          <label for="gmail">Gurdian Email</label>
+                          <label for="gmail">Guardian Email</label>
                         </div>
                       </div>
                       <div class="col-sm-6">
@@ -975,7 +980,7 @@
                 >Contact Us</a
               >
               <a class="btn btn-link text-white-50" href="classes.html"
-                >Curriculum</a
+                >Our Curriculum</a
               >
               <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
               <a class="btn btn-link text-white-50" href=""
@@ -1092,6 +1097,28 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
+    <!-- <script>
+      const curriculumItem = document.querySelector('.nav-item.dropdown');
+    
+      // Open dropdown on hover
+      curriculumItem.addEventListener('mouseenter', function () {
+        const toggle = this.querySelector('[data-bs-toggle="dropdown"]');
+        const dropdown = new bootstrap.Dropdown(toggle);
+        dropdown.show();
+      });
+    
+      curriculumItem.addEventListener('mouseleave', function () {
+        const toggle = this.querySelector('[data-bs-toggle="dropdown"]');
+        const dropdown = new bootstrap.Dropdown(toggle);
+        dropdown.hide();
+      });
+    
+      // On click, follow the href (do not preventDefault)
+      document.getElementById('curriculumLink').addEventListener('click', function (e) {
+        window.location = this.href;
+      });
+    </script> -->
+    
     <script src="js/main.js"></script>
   </body>
 </html>
