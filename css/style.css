@@ -782,3 +782,33 @@ h6,
       max-height: 250px;
     }
   }
+/* Privacy Policy */
+.policy-wrapper {
+  /* background-color: #f8f8f8; */
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.policy-content {
+  background-color: #ffffff;
+  padding: 3rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  font-family: 'Heebo', sans-serif;
+  color: #333;
+  line-height: 1.7;
+}
+
+.policy-content h1,
+.policy-content h2 {
+  color: #2a4d3b;
+}
+
+.policy-content a {
+  color: #d07d41;
+  text-decoration: none;
+}
+
+.policy-content a:hover {
+  text-decoration: underline;
+}

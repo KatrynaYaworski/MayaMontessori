@@ -66,11 +66,7 @@ class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-5
       <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
         <a href="calendar.html" class="dropdown-item">Calendar</a>
         <a href="faq.html" class="dropdown-item">FAQ</a>
-        <hr class="dropdown-divider">
-        <h6 class="dropdown-header active">Documents</h6>
-        <a href="enrollment.html" class="dropdown-item active">Enrollment</a>
-        <a href="schedule.html" class="dropdown-item active">Sample Schedule</a>
-        <a href="tuition.html" class="dropdown-item active">Tuition & Rate Sheet</a>
+        <a href="documents.html" class="dropdown-item active" >Documents</a>
       </div>
     </div>
     
@@ -98,7 +94,7 @@ class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-5
       <div class="card text-center document-card shadow-sm h-100">
         <div class="card-body">
           <i class="fas fa-file-alt fa-3x text-primary mb-3"></i>
-          <h5 class="card-title mb-3">Enrollment Packet</h5>
+          <h5 class="card-title mb-3" >Documents Packet</h5>
           <p class="card-text">All required forms to get started with Maya Montessori.</p>
           <a href="docs/enrollment.pdf" class="btn btn-outline-primary" download>
             <i class="fas fa-download me-2"></i>Download PDF
@@ -113,7 +109,7 @@ class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-5
           <i class="fas fa-calendar-alt fa-3x text-success mb-3"></i>
           <h5 class="card-title mb-3">Sample Daily Schedule</h5>
           <p class="card-text">Explore a typical day in our Montessori environment.</p>
-          <a href="docs/sample-schedule.pdf" class="btn btn-outline-success" download>
+          <a href="docs/Maya_Montessori_Sample_Daily_Schedule.pdf" class="btn btn-outline-success" download>
             <i class="fas fa-download me-2"></i>Download PDF
           </a>
         </div>
@@ -165,7 +161,7 @@ class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-5
           <i class="fas fa-hand-holding-heart fa-3x text-info mb-3"></i>
           <h5 class="card-title mb-3">Getting Started Guide</h5>
           <p class="card-text">Everything to expect before your child’s first day with us.</p>
-          <a href="docs/getting-started.pdf" class="btn btn-outline-info" download>
+          <a href="docs/Maya_Montessori_Getting_Started_Guide.pdf" class="btn btn-outline-info" download>
             <i class="fas fa-download me-2"></i>Download PDF
           </a>
         </div>
@@ -217,10 +213,18 @@ data-wow-delay="0.1s"
         >
       </p>
       <div class="d-flex pt-2">
-        <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/profile.php?id=61575298497746" target="_blank">
+        <a
+          class="btn btn-outline-light btn-social"
+          href="https://www.facebook.com/profile.php?id=61575298497746"
+          target="_blank"
+        >
           <i class="fab fa-facebook-f"></i>
         </a>
-        <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/mayamontessori25/" target="_blank">
+        <a
+          class="btn btn-outline-light btn-social"
+          href="https://www.instagram.com/mayamontessori25/"
+          target="_blank"
+        >
           <i class="fab fa-instagram"></i>
         </a>
       </div>
@@ -236,12 +240,33 @@ data-wow-delay="0.1s"
       <a class="btn btn-link text-white-50" href="classes.html"
         >Our Curriculum</a
       >
-      <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
-      <a class="btn btn-link text-white-50" href=""
+      <a class="btn btn-link text-white-50" href="privacy-policy.html"
+        >Privacy Policy</a
+      >
+      <a class="btn btn-link text-white-50" href="terms-conditions.html"
         >Terms & Condition</a
       >
     </div>
+
+    <!-- Hours of Operation -->
     <div class="col-lg-3 col-md-6">
+      <h3 class="text-white mb-4">Hours of Operation</h3>
+      <p class="mb-2">
+        <i class="far fa-calendar-alt me-2"></i>
+        Monday - Friday
+      </p>
+      <p class="mb-2">
+        <i class="fa fa-clock me-3"></i>7:00am - 6:00pm</p>
+    </div>
+
+    <div class="col-lg-3 col-md-6">
+      <h3 class="text-white mb-4">Ready to Visit?</h3>
+      <p>We’d love to meet you! Schedule a private tour to explore our peaceful, home-based classroom and talk with Mrs Pantea.</p>
+      <a href="appointment.html" style="color: #D46B2C" class="btn btn-sm btn-outline-light mt-2">Schedule a Tour</a>
+    </div>
+    
+    <!-- Photo Gallery -->
+    <!-- <div class="col-lg-3 col-md-6">
       <h3 class="text-white mb-4">Photo Gallery</h3>
       <div class="row g-2 pt-2">
         <div class="col-4">
@@ -287,8 +312,10 @@ data-wow-delay="0.1s"
           />
         </div>
       </div>
-    </div>
-    <div class="col-lg-3 col-md-6">
+    </div> -->
+    <!-- End of Gallery -->
+
+    <!-- <div class="col-lg-3 col-md-6">
       <h3 class="text-white mb-4">Newsletter</h3>
       <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
       <div class="position-relative mx-auto" style="max-width: 400px">
@@ -304,7 +331,7 @@ data-wow-delay="0.1s"
           SignUp
         </button>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
 <div class="container">
@@ -313,21 +340,17 @@ data-wow-delay="0.1s"
       <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
         &copy; <a class="border-bottom" href="#">Maya Montessori</a>,
         All Right Reserved.
-
-        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
         <a
           class="attribution"
           href="https://htmlcodex.com"
-          style="font-size: 0.8em; opacity: 0.7; color: #888"
+          style="font-size: 0.6em; opacity: 0.7; color: #888"
           >Theme by HTML Codex</a
         >
       </div>
       <div class="col-md-6 text-center text-md-end">
         <div class="footer-menu">
-          <a href="">Home</a>
-          <a href="">Privacy Policy</a>
-          <a href="">Help</a>
-          <a href="">FAQs</a>
+          <a href="index.html">Home</a>
+          <a href="faq.html">FAQs</a>
         </div>
       </div>
     </div>
