@@ -261,7 +261,126 @@ h6,
     aspect-ratio: 4 / 3;
     max-height: none;
   }
+  /* ***Calendar*** */
+  /* Section Background */
+.calendar-section {
+    background-color: #faf9f6;
+    padding: 60px 0;
+  }
+  .calendar-columns ul {
+  min-width: 280px;
+  margin: 0;
+}
+
+  /* Calendar Image */
+  .calendar-img {
+    max-width: 800px;
+    width: 100%;
+    transition: transform 0.3s ease;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  }
   
+  .calendar-img:hover {
+    transform: scale(1.025);
+  }
+  
+  /* Key Dates Container */
+  .calendar-summary {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 40px;
+    margin-top: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Section Heading */
+  .calendar-summary h3 {
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    font-size: 1.75rem;
+    color: #14312c;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* List Items */
+  .calendar-summary .list-group-item {
+    padding: 0.5rem 0;
+    border: none;
+    font-size: 1rem;
+    color: #444;
+    display: flex;
+    align-items: center;
+  }
+  
+.calendar-summary .list-group-item {
+  border: none;
+  font-size: 1rem;
+  padding-left: 0;
+}
+
+.calendar-summary ul {
+  margin-bottom: 0;
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-weight: 600;
+  border: 2px solid #d36a00;
+  border-radius: 40px;
+  color: #d36a00;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #d36a00;
+  color: #fff;
+}
+  
+  .calendar-summary li {
+    margin-bottom: 8px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .calendar-summary li i {
+    margin-right: 0.5rem;
+    color: #d97706;
+  }
+  
+  .key-dates-row {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+  
+  .key-dates-row ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  
+  /* Button Styling */
+ 
+  
+/*** Programs  ***/
+
+.program-icon-orange {
+    background-color: #d26e32;
+    color: white;
+  }
+  .program-icon-green {
+    background-color: #3e5c3a;
+    color: white;
+  }
+  
+
 /*** Facility ***/
 .facility-item .facility-icon {
     position: relative;
