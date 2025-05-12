@@ -1,4 +1,4 @@
-/********** Template CSS **********/
+/********** CSS **********/
 :root {
     --primary: #798B64;
     --light: #F5F1E0;
@@ -590,7 +590,10 @@ h6,
 .classes-item:hover {
     margin-top: -10px;
 }
-
+a:hover .classes-item h3,
+a:hover .classes-item h6 {
+  color: #103741 !important;
+}
 
 /*** Team ***/
 .team-item .team-text {
