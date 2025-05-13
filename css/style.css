@@ -388,7 +388,11 @@ h6,
     border-color: #ddd;
   }
   
-
+  .future-program {
+    opacity: 0.6;
+    pointer-events: none;
+    filter: grayscale(20%);
+  }
 
 .program-comparison .card-title {
     font-weight: 700;
@@ -594,6 +598,14 @@ a:hover .classes-item h3,
 a:hover .classes-item h6 {
   color: #103741 !important;
 }
+
+.alert-light {
+  background-color: #fffdf5;
+  color: #6b4b00;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+}
+
 
 /*** Team ***/
 .team-item .team-text {
