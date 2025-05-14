@@ -12,16 +12,13 @@
     bottom: 45px;
     z-index: 99;
 }
-@font-face {
-  font-family: 'merriweather';
+/* @font-face {
+  font-family: 'Domine', Georgia, serif;
   src: url('../fonts/Merriweather.ttf') format('truetype');
-  font-weight: 700; /* Adjust as needed */
-  font-style: italic; /* Adjust as needed */
-}
+  font-weight: 700;
+  font-style: italic;
+} */
 
-body {
-  /* font-family: serif; */
-}
 
 
 /*** Spinner ***/
@@ -74,6 +71,9 @@ body {
     font-weight: normal;
     border-radius: 50px;
 }
+h1, h2, h3, h4 {
+  font-family: 'Domine', Georgia, serif;
+}
 
 
 /*** Heading ***/
@@ -91,7 +91,7 @@ h4,
 .display-4,
 .display-5,
 .display-6 {
-    font-family: 'merriweather', cursive;
+    font-family: 'Domine', Georgia, serif;
     font-weight: 700;
 }
 
@@ -103,7 +103,7 @@ h6,
 }
 
 .font-secondary {
-    font-family: 'merriweather';
+    font-family: 'Domine', Georgia, serif;
 }
 
 
@@ -114,7 +114,7 @@ h6,
 }
 
 .navbar-brand .brand-text {
-  font-family: 'Lobster Two', cursive;
+  font-family: 'Lobster Two';
   font-weight: 700;
   font-size: 1.25rem;
   color: #d46b2c;
