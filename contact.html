@@ -47,9 +47,10 @@
 
         <!-- Navbar Start -->
   <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
-    <a href="index.html" class="navbar-brand">
+    <a href="index.html" class="navbar-brand d-flex align-items-center">
       <h1 class="m-0 text-primary">
-        <img class="logo" src="img/Logo-Blocks.png" alt="MHM Logo" />Maya Montessori
+        <img class="brand-text" src="img/Logo-Blocks.png" alt="MHM Logo" class="me-2 logo"/>Maya
+        Montessori
       </h1>
     </a>
     <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -159,6 +160,9 @@
                                         <div id="email-error" class="text-danger mt-1" style="display: none;"></div>
                                         <input type="hidden" name="_captcha" value="false">
    <!-- Fix after deploy!               <input type="hidden" name="_next" value="https://mayamontessori.com/thank-you.html"> -->
+                                         <input type="hidden" name="_autoresponse" value="Thank you for contacting Maya Montessori. We’ll be in touch shortly!">
+                                         <input type="text" name="_honey" style="display:none">
+
                                       
                                         <div class="row g-3">
                                           <div class="col-sm-6">
@@ -186,7 +190,8 @@
                                             </div>
                                           </div>
                                           <div class="col-12">
-                                            <button class="btn btn-primary w-100 py-3" type="submit" id="submitBtn" disabled>Send Message</button>
+                                            <button class="btn btn-primary w-100 py-3" type="submit" id="submitBtn">Send Message</button>
+
 
                                           </div>
                                         </div>
@@ -407,54 +412,55 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
-    <!-- Template Javascript -->
+    <!--  Javascript -->
     <script src="js/main.js"></script>
     <script>
-        const form = document.querySelector("form");
-        const submitBtn = document.getElementById("submitBtn");
-      
-        const nameInput = document.getElementById("name");
-        const emailInput = document.getElementById("email");
-        const subjectInput = document.getElementById("subject");
-        const messageInput = document.getElementById("message");
-        const errorBox = document.getElementById("email-error");
-      
-        function validateEmail(email) {
-          return /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email);
-        }
-      
-        function validateForm() {
-          const isNameValid = nameInput.value.trim().length > 0;
-          const isEmailValid = validateEmail(emailInput.value.trim());
-          const isSubjectValid = subjectInput.value.trim().length > 0;
-          const isMessageValid = messageInput.value.trim().length > 0;
-      
-          // Show or hide error
-          if (!isEmailValid && emailInput.value.trim() !== "") {
-            errorBox.textContent = "Please enter a valid email address.";
-            errorBox.style.display = "block";
-            emailInput.classList.add("is-invalid");
-          } else {
-            errorBox.style.display = "none";
-            emailInput.classList.remove("is-invalid");
+      const form = document.querySelector("form");
+      const submitBtn = document.getElementById("submitBtn");
+    
+      const gnameInput = document.getElementById("gname");
+      const gmailInput = document.getElementById("gmail");
+      const cnameInput = document.getElementById("cname");
+      const cageInput = document.getElementById("cage");
+      const messageInput = document.getElementById("message");
+      const errorBox = document.getElementById("email-error");
+    
+      function validateEmail(email) {
+        return /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email);
+      }
+    
+      form.addEventListener("submit", function (e) {
+        const gname = gnameInput.value.trim();
+        const gmail = gmailInput.value.trim();
+        const cname = cnameInput.value.trim();
+        const cage = cageInput.value.trim();
+        const message = messageInput.value.trim();
+    
+        if (!gname || !gmail || !cname || !cage || !message) {
+          e.preventDefault();
+    
+          if (!gmail) {
+            alert("Please enter your email address.");
+            gmailInput.focus();
+            return;
           }
-      
-          // Enable or disable submit
-          submitBtn.disabled = !(isNameValid && isEmailValid && isSubjectValid && isMessageValid);
+    
+          alert("Please complete all required fields before submitting.");
+          return;
         }
-      
-        // Listen to input events
-        [nameInput, emailInput, subjectInput, messageInput].forEach(input =>
-          input.addEventListener("input", validateForm)
-        );
-      
-        // Optional: prevent submit if still invalid
-        form.addEventListener("submit", function (e) {
-          if (submitBtn.disabled) {
-            e.preventDefault();
-          }
-        });
-      </script>
+    
+        if (!validateEmail(gmail)) {
+          e.preventDefault();
+          errorBox.textContent = "Please enter a valid email address.";
+          errorBox.style.display = "block";
+          gmailInput.classList.add("is-invalid");
+          gmailInput.focus();
+        } else {
+          errorBox.style.display = "none";
+          gmailInput.classList.remove("is-invalid");
+        }
+      });
+    </script>
       
 </body>
 

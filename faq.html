@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -34,11 +34,19 @@
 </head>
 <body>
 <div class="container-xxl bg-white p-0">
+  <!-- Spinner Start -->
+  <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+</div>
+<!-- Spinner End -->
    <!-- Navbar Start -->
    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
-    <a href="index.html" class="navbar-brand">
+    <a href="index.html" class="navbar-brand d-flex align-items-center">
       <h1 class="m-0 text-primary">
-        <img class="logo" src="img/Logo-Blocks.png" alt="MHM Logo" />Maya Montessori
+        <img class="brand-text" src="img/Logo-Blocks.png" alt="MHM Logo" class="me-2 logo"/>Maya
+        Montessori
       </h1>
     </a>
     <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -159,17 +167,17 @@
                 <div class="accordion-body">Start by scheduling a tour. If it feels like the right fit, we’ll provide your enrollment forms and checklist.</div>
               </div>
             </div>
-            <div class="accordion-item">
+            <!-- <div class="accordion-item">
               <h2 class="accordion-header" id="e2">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ae2">What is the tuition rate?</button>
               </h2>
               <div id="ae2" class="accordion-collapse collapse" data-bs-parent="#faqEnrollment">
                 <div class="accordion-body">Full-time care is $1,200/month. Meals and camera access are optional add-ons. See our <a href="tuition.html">Tuition & Rate Sheet</a> for full details.</div>
               </div>
-            </div>
+            </div> -->
             <div class="accordion-item">
               <h2 class="accordion-header" id="e3">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ae3">Do you require a deposit?</button>
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ae3">Is there a deposit required?</button>
               </h2>
               <div id="ae3" class="accordion-collapse collapse" data-bs-parent="#faqEnrollment">
                 <div class="accordion-body">Yes. A $250 holding fee and $50 enrollment fee are due to reserve a spot. The holding fee is non-refundable.</div>
@@ -185,10 +193,10 @@
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header" id="e5">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ae5">What happens if I pay late?</button>
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ae5">Can I request a tuition breakdown?</button>
               </h2>
               <div id="ae5" class="accordion-collapse collapse" data-bs-parent="#faqEnrollment">
-                <div class="accordion-body">Tuition is due on the first of each month. Late payments may result in a fee or temporary suspension of care. We do our best to work with families before taking further action. Please refer to our Tuition Policy for full details.</div>
+                <div class="accordion-body">Absolutely. We’re happy to walk you through tuition and service details during your tour or via email. Please reach out through our contact form.</div>
               </div>
             </div>
           </div>
@@ -201,7 +209,7 @@
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ad1">What does a typical day look like?</button>
               </h2>
               <div id="ad1" class="accordion-collapse collapse" data-bs-parent="#faqLife">
-                <div class="accordion-body">Children engage in Montessori work cycles, outdoor play, meals, naps, art, and enrichment. <a href="schedule.html">View a sample schedule</a>.</div>
+                <div class="accordion-body">Children engage in Montessori work cycles, outdoor play, meals, naps, art, and enrichment. <a href="documents.html">View a sample schedule</a>.</div>
               </div>
             </div>
             <div class="accordion-item">
@@ -209,7 +217,7 @@
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ad2">Are meals included?</button>
               </h2>
               <div id="ad2" class="accordion-collapse collapse" data-bs-parent="#faqLife">
-                <div class="accordion-body">Nutritious catered meals are available for $80/month. Parents may also pack their own nut-free meals.</div>
+                <div class="accordion-body">Families may bring nut-free meals or opt into our catered meal plan for a small monthly fee.</div>
               </div>
             </div>
             <div class="accordion-item">
@@ -217,7 +225,7 @@
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ad3">Do you allow toys from home?</button>
               </h2>
               <div id="ad3" class="accordion-collapse collapse" data-bs-parent="#faqLife">
-                <div class="accordion-body">To avoid loss and distraction, personal toys are not allowed unless pre-approved.</div>
+                <div class="accordion-body">We ask that personal toys stay at home unless specifically approved to avoid distractions and loss.</div>
               </div>
             </div>
             <div class="accordion-item">
@@ -233,7 +241,7 @@
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ad5">Is there screen time?</button>
               </h2>
               <div id="ad5" class="accordion-collapse collapse" data-bs-parent="#faqLife">
-                <div class="accordion-body">Screen time is minimal (under 20 min/day) and always educational with parent approval.</div>
+                <div class="accordion-body">Very minimally—under 20 minutes per day, always educational, and with parent permission.</div>
               </div>
             </div>
           </div>
@@ -246,7 +254,7 @@
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#as1">What if my child is sick?</button>
               </h2>
               <div id="as1" class="accordion-collapse collapse" data-bs-parent="#faqSafety">
-                <div class="accordion-body">Children must stay home if sick. They may return after 48 symptom-free hours (fever, vomiting, diarrhea). Doctor's note may be required.</div>
+                <div class="accordion-body">Children must stay home if sick. They may return after 24 symptom-free hours (fever, vomiting, diarrhea). Doctor's note may be required.</div>
               </div>
             </div>
             <div class="accordion-item">
@@ -254,7 +262,7 @@
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#as2">How do you manage behavior?</button>
               </h2>
               <div id="as2" class="accordion-collapse collapse" data-bs-parent="#faqSafety">
-                <div class="accordion-body">We use gentle, Montessori-based discipline—redirecting, modeling, and teaching with respect. No harsh discipline is ever used.</div>
+                <div class="accordion-body">We use gentle, respectful guidance in line with Montessori values—modeling positive behavior, giving choices, and supporting self-regulation.</div>
               </div>
             </div>
             <div class="accordion-item">
@@ -262,7 +270,7 @@
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#as3">What if my child gets hurt?</button>
               </h2>
               <div id="as3" class="accordion-collapse collapse" data-bs-parent="#faqSafety">
-                <div class="accordion-body">Minor injuries are treated on-site. Serious injuries will be reported to parents immediately, and emergency services contacted if needed.</div>
+                <div class="accordion-body">Minor injuries are treated onsite and shared with you at pickup. For anything serious, you’ll be notified immediately and emergency care will be provided if needed.</div>
               </div>
             </div>
             <div class="accordion-item">
@@ -280,10 +288,10 @@
           <div class="accordion" id="faqEmergency">
             <div class="accordion-item">
               <h2 class="accordion-header" id="em1">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#aeem1">What if there’s severe weather?</button>
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#aeem1">Do you close for weather or holidays?</button>
               </h2>
               <div id="aeem1" class="accordion-collapse collapse" data-bs-parent="#faqEmergency">
-                <div class="accordion-body">We follow Prosper ISD’s closure decisions and notify families by text or WhatsApp.</div>
+                <div class="accordion-body">Yes, We follow Prosper ISD’s closure decisions and observe a regular holiday schedule. You'll receive alerts via test or WhatsApp. <a href="calendar.html">View our Annual Calendar</a>. </div>
               </div>
             </div>
             <div class="accordion-item">
@@ -484,7 +492,14 @@
  <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 </div>
 
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="lib/wow/wow.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
 

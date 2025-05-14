@@ -98,6 +98,29 @@ h6,
 
 
 /*** Navbar ***/
+.navbar-brand img {
+  max-height: 45px;
+  width: auto;
+}
+
+.navbar-brand .brand-text {
+  font-family: 'Lobster Two', cursive;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #d46b2c;
+  white-space: nowrap;
+}
+
+@media (max-width: 576px) {
+  .navbar-brand img {
+    max-height: 30px;
+  }
+
+  .navbar-brand .brand-text {
+    font-size: 1.05rem;
+  }
+}
+
 .navbar .navbar-nav .nav-link {
     padding: 30px 15px;
     color: var(--dark);
