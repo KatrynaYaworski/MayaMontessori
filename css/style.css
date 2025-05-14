@@ -12,6 +12,16 @@
     bottom: 45px;
     z-index: 99;
 }
+@font-face {
+  font-family: 'merriweather';
+  src: url('../fonts/Merriweather.ttf') format('truetype');
+  font-weight: 700; /* Adjust as needed */
+  font-style: italic; /* Adjust as needed */
+}
+
+body {
+  /* font-family: serif; */
+}
 
 
 /*** Spinner ***/
@@ -93,7 +103,7 @@ h6,
 }
 
 .font-secondary {
-    font-family: 'merriweather', cursive;
+    font-family: 'merriweather';
 }
 
 
