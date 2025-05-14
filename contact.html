@@ -418,10 +418,10 @@
       const form = document.querySelector("form");
       const submitBtn = document.getElementById("submitBtn");
     
-      const gnameInput = document.getElementById("gname");
-      const gmailInput = document.getElementById("gmail");
-      const cnameInput = document.getElementById("cname");
-      const cageInput = document.getElementById("cage");
+      const gnameInput = document.getElementById("name");
+      const gmailInput = document.getElementById("email");
+      const cnameInput = document.getElementById("subject");
+      // const cageInput = document.getElementById("cage");
       const messageInput = document.getElementById("message");
       const errorBox = document.getElementById("email-error");
     
@@ -433,10 +433,10 @@
         const gname = gnameInput.value.trim();
         const gmail = gmailInput.value.trim();
         const cname = cnameInput.value.trim();
-        const cage = cageInput.value.trim();
+        // const cage = cageInput.value.trim();
         const message = messageInput.value.trim();
     
-        if (!gname || !gmail || !cname || !cage || !message) {
+        if (!gname || !gmail || !cname || !message) {
           e.preventDefault();
     
           if (!gmail) {
